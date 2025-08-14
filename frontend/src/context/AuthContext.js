@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserDetails = async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/me`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/auth/me`);
       setUser(res.data);
     } catch (error) {
       console.error("Error fetching user:", error);

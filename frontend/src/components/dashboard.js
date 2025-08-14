@@ -44,7 +44,7 @@ const Dashboard = () => {
     if (!loading && token) {
       fetchTransactions();
     }
-  }, [loading, token]);
+  }, [loading, token, fetchTransactions]);
 
   const fetchTransactions = async () => {
     try {

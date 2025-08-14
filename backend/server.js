@@ -10,7 +10,13 @@ connectDB();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: ["https://mern-expense-tracker-nj96.onrender.com"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/transactions", transactionRoutes);

@@ -106,7 +106,7 @@ const Expense = () => {
       });
       setExpenseList([...expenseList, res.data]);
       setFilteredExpense([...filteredExpense, res.data]);
-      setNewExpense({ description: "", category: "", amount: "", date: "" });
+      setNewExpense({ description: "", category: "", amount: "", date: new Date().toISOString().split("T")[0] });
     } catch (error) {
       console.error("Error adding expense", error);
     }
